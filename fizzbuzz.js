@@ -1,20 +1,14 @@
-var str="",x,y,a;
-for (a=1;a<=100;a++)
-{
-    x = a%3 ==0;
-    y = a%5 ==0;
-    if(x)
-    {
-        str+="fizz"
+
+function fizzbuzz(num) {
+    if (num % 3 === 0 && num % 5 === 0) {
+        return "FizzBuzz";
+    } else if (num % 3 === 0) {
+        return "Fizz";
+    } else if (num % 5 === 0) {
+        return "Buzz";
+    } else {
+        return num;
     }
-    if (y)
-    {
-        str+="buzz"
-    }
-    if (!(x||y))
-    {
-        str+=a;
-    }
-    str+="\n"
 }
-console.log(str);
+
+module.exports = fizzbuzz
